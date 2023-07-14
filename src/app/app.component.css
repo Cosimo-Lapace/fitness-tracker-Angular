@@ -5,19 +5,4 @@ mat-sidenav-container,mat-sidenav,mat-sidenav-conten{
 mat-sidenav{
   width: 250px;
 }
-a{
-  text-decoration: none;
-  color: white;
-}
-a:hover, a:active{
-  color: lightgray;
-}
-.nav-items{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.nav-list-cap{
-  display: inline-block;
-  padding-left: 6px;
-}
+
