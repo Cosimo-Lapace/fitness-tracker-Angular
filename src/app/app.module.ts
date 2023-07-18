@@ -18,6 +18,10 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+
 
 @NgModule({
   declarations: [
@@ -40,6 +44,8 @@ import { TrainingService } from './training/training.service';
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
+    provideFirebaseApp(() => initializeApp( environment.firebase )),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [AuthService,TrainingService],
   bootstrap: [AppComponent],
